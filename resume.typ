@@ -51,6 +51,15 @@
 == Experience
 
 #work(
+  title: "Lead Web Developer",
+  location: "Delta, BC",
+  company: "Seaquam Robotics",
+  dates: dates-helper(start-date: "October 2023", end-date: "Present"),
+)
+- Led a team of 4 other students to make the data on a website dynamic by creating a *server with Deno* for managing data, connecting to APIs, and updating the UI on the frontend.
+- Created a *Content Management System* in React with TypeScript which resulted in our coach being able to easily update the data for different teams every year.
+
+#work(
   title: "Robotics Student",
   location: "Delta, BC",
   company: "Seaquam Robotics",
@@ -69,37 +78,7 @@
 - Helped students working on the most advanced levels with debugging code in *C\# with Unity*, and adding features for their games.
 - Aided with sales calls, SEO, and optimizing ads for the branch.
 
-#work(
-  title: "Lead Web Developer",
-  location: "Delta, BC",
-  company: "Seaquam Robotics",
-  dates: dates-helper(start-date: "October 2023", end-date: "Present"),
-)
-- Led a team of 4 other students to make the data on a website dynamic by creating a *server with Deno* for managing data, connecting to APIs, and updating the UI on the frontend.
-- Created a *Content Management System* in React with TypeScript which resulted in our coach being able to easily update the data for different teams every year.
-
-== Projects
-
-#project(
-  name: "Verbosity (Custom Programming Language)",
-  url: "https://github.com/Github11200/Verbosity",
-)
-- A compiler written in C++ for my owen programming langauge.
-- It contains a *lexer, parser, and code generator* to take input code, create an abstact syntax tree, and then generate an output in C++.
-
-#project(
-  name: "Termicord",
-  url: "https://github.com/Github11200/Termicord",
-)
-- Discord in the terminal using *C++* and *raw TCP sockets* to communicate and send messages.
-- Creates several servers to act as chat rooms, spins up a custom *HTTP server*, and includes client code for a TUI application so the user can chat with others from their terminal.
-
-#project(
-  name: "Posturai",
-  url: "https://github.com/Github11200/Posturai",
-)
-- A Posture correction app written in *Python* and Streamlit whose goal is to detect bad posture and warn a user about it.
-- Makes use of a *Machine Learning model* written using *PyTorch* to classify good and bad posture based on several images.
+#include "projects/fullstack-projects.typ"
 
 == Awards
 

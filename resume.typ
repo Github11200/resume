@@ -51,7 +51,7 @@
 == Experience
 
 #work(
-  title: "Lead Web Developer",
+  title: "Software Engineering",
   location: "Delta, BC",
   company: "Seaquam Robotics",
   dates: dates-helper(start-date: "October 2023", end-date: "Present"),
@@ -60,7 +60,7 @@
 - Created a *Content Management System* in React with TypeScript which resulted in our coach being able to easily update the data for different teams every year.
 
 #work(
-  title: "Robotics Student",
+  title: "Robotics Engineer",
   location: "Delta, BC",
   company: "Seaquam Robotics",
   dates: dates-helper(start-date: "October 2021", end-date: "Present"),
@@ -78,7 +78,7 @@
 - Helped students working on the most advanced levels with debugging code in *C\# with Unity*, and adding features for their games.
 - Aided with sales calls, SEO, and optimizing ads for the branch.
 
-#include "projects/fullstack-projects.typ"
+#include "projects/low-level-projects.typ"
 
 == Awards
 
@@ -87,7 +87,7 @@
   issuer: "RECF & Vex Robotics",
   date: "April 2026",
 )
-- Awarded to *1 out of 20,000+* teams across the world consistent and excellent performance in all areas of robotics.
+- Awarded to the best team *out of 20,000+* teams worldwide for consistent and excellent performance in all areas of robotics.
 
 #certificates(
   name: "Excellence Award @ Pronvincial Championship",

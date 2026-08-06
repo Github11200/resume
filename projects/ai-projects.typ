@@ -4,21 +4,27 @@
 
 #project(
   name: "Posturai",
-  url: "https://github.com/Github11200/Posturai",
+  type: "Hackathon Project",
+  url: "https://devpost.com/software/posturai",
+  linkName: "Devpost",
 )
-- A Posture correction app written in *Python* and *Streamlit* whose goal is to detect bad posture and warn a user about it, won *2nd place @ VS Hacks 2025*.
-- Uses a *Machine Learning model* written using *PyTorch* to classify good and bad posture based on a dataset of ~150 images.
+- A Posture correction app that detects bad posture and warn a user about it, built using Python and Streamlit
+- Developed a Machine Learning model using PyTorch to classify good and bad posture using a dataset of only 150 images
 
 #project(
   name: "AI Complaint Categorization System",
+  type: "Personal Project",
   url: "https://github.com/Github11200/Ruby-Hackathon-Project",
+  linkName: "GitHub",
 )
-- Analyzes text, audio, and image based complaints and then categorizes each of them. It all get stored in a *vector database* for a *RAG pipeline*. This project was a *hackathon finalist at the Headerstarter Fellowship Hackathon*.
-- Makes use of *OCR Space*, *Gemini*, *Hugging Face*, *Langchain*, and *Supabase* (for the vector database).
+- Analyzes multimodal complaints data and categorizes them using of OCR Space, Gemini, and Hugging Face
+- Developed a RAG pipeline that stores the data using a vector database and then retrieves it using Langchain
 
 #project(
   name: "Penetration Testing Agent",
+  type: "Personal Project",
   url: "https://github.com/Github11200/Penetration-Testing-Agent",
+  linkName: "GitHub",
 )
-- An agent to perform penetration tests built using *Typescript*, *Bun JS*, *Mastra*, and *Puppeteer* for scraping.
-- The agent can scrape tool information, install these tools, and then run them in the terminal to complete the penetration test.
+- An agent to perform penetration tests built using Typescript, Bun JS, Mastra, and Puppeteer for scraping
+- The agent can scrape tool information, install tools, and run them in the terminal to complete penetration tests

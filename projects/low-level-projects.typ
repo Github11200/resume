@@ -24,7 +24,7 @@
 - Applied C++26 features such as abstract classes, virtual methods, smart pointers, and variants
 
 #project(
-  name: "Termicord",
+  name: "Termicord - Real-Time CLI Chat Application",
   type: "Personal Project",
   url: "https://github.com/Github11200/Termicord",
   linkName: "GitHub",

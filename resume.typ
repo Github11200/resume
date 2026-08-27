@@ -49,7 +49,7 @@
   title: "Embedded Controls Software Engineer",
   company: "Seaquam Robotics",
   location: "Delta, BC",
-  dates: dates-helper(start-date: "October 2021", end-date: "June 2026"),
+  dates: dates-helper(start-date: "October 2021", end-date: "June 2023"),
 )
 - Implemented C++ motion algorithms, securing a 100% win rate during autonomous periods across 15+ matches
 - Designed an Interpolated Look Up Table using a Monotonic Cubic Spline for tuning PID constants in real-time which resulted in a 200% increase in accuracy across all movements with error tolerances being \<1 inch
@@ -63,7 +63,16 @@
 - Helped 5 senior Black Belt students debug and implement features for their games being built with C\# and Unity
 - Designed ad campaigns with visual assets for Code Ninjas, improving our local branch search visibility
 
-#include "projects/low-level-projects.typ"
+#work(
+  title: "Freelance Systems Administrator / IT Consultant",
+  company: "Convergence Media",
+  location: "Remote",
+)
+- Created a custom Linux Mint ISO using Cubic with 3 bash scripts to automate the installation and setup of programs
+- Deployed a self-hosted Nextcloud server (Microsoft 365 alternative) using Docker, which allowed file sharing and private video calls
+- Configured a Tailscale tunnel to expose a public link and allow anyone to access the Nextcloud server for video calls or file sharing
+
+#include "projects/ai-projects.typ"
 
 == Awards
 
@@ -72,7 +81,7 @@
   issuer: "RECF & Vex Robotics",
   date: "April 2026",
 )\
-Awarded to the top team out of 20,000+ teams worldwide for excellent performance
+Awarded to the top team out of 20,000+ teams worldwide for excellent performance in all areas of robotics
 
 #certificates(
   name: "Excellence Award @ Provincial Championship",

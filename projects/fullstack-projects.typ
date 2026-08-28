@@ -3,22 +3,28 @@
 == Projects
 
 #project(
-  name: "Telemetry Data Visualization",
-  url: "https://github.com/Github11200/Robot-Data-Visualization",
+name: "Content Management System & Website Backend",
+type: "Lead Software Engineer",
+url: "https://github.com/Github11200/Seaquam-Robotics-Backend",
+linkName: "GitHub",
 )
-- Takes in telemetry data on the robot's position and error in a system through a *websocket* and then visualizes it in *real-time on a Svelte dashboard*.
-- Uses *Chart.js* for displaying the graphs in real-time, and the *Canvas API* for drawing the robot on a 2D field.
+- Built a backend to aggregate data from an external API and a custom content management system that let our coach update data on the robotics website without touching code, reducing reliance on developer support for routine content changes
+- Built the backend using *Deno* and created the desktop app for content management system using *Tauri* and *React*
 
 #project(
-  name: "AI Complaint Categorization System",
-  url: "https://github.com/Github11200/Ruby-Hackathon-Project",
+name: "Telemetry Data Visualization",
+type: "Embedded Controls Software Engineer",
+url: "https://github.com/Github11200/Robot-Data-Visualization",
+linkName: "GitHub",
 )
-- Analyzes text, audio, and image based complaints and then categorizes each of them. It all get stored in a *vector database* for a *RAG pipeline*. This project was a *hackathon finalist at the Headerstarter Fellowship Hackathon*.
-- Makes use of *OCR Space*, *Gemini*, *Hugging Face*, *Langchain*, and *Supabase* (for the vector database).
+- Streamed CSV-formatted odometry, PID error data, and logs over a *websocket* to a *real-time Svelte dashboard*
+- Used *Chart.js* to render live PID and error graphs and the *Canvas API* to draw the robot's live position on a 2D field
 
 #project(
-  name: "Content Management System & Website Backend",
-  url: "https://github.com/Github11200/Seaquam-Robotics-Backend",
+name: "AI Complaint Categorization System",
+type: "Hackathon Project",
+url: "https://github.com/Github11200/Ruby-Hackathon-Project",
+linkName: "GitHub",
 )
-- Created a backend to *aggregate data from an API* and a custom *content management system* which allowed our coach to update data on our robotics website.
-- The backend was written using *Deno* and the content management system was created with *Tauri* and *React*.
+- Built a pipeline that analyzed text, audio, and image-based complaints, categorized them, and stored the results in a *vector database* for a *RAG pipeline*; named a *finalist at the Headstarter Fellowship Hackathon*
+- Leveraged OCR Space, Gemini, Hugging Face, LangChain, and Supabase (for the vector database) to power the pipeline

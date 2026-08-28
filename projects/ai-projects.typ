@@ -19,7 +19,7 @@
 )
 - Utilized LangChain to automatically generate tags, a title, and references to other notes with LLMs running locally on Ollama
 - Launched the plugin publicly on Obsidian's community store during the span of the hackathon and gained 30+ users
-- Built a RAG + GraphRAG system for answering user queries and surfacing relevant notes, combining a local Graphology database with LangChain vector-store memory
+- Built a RAG + GraphRAG system for answering user queries and surfacing relevant notes, combining a local Graphology database, LangChain Memory Vector Stores and an embedding model running locally
 
 #project(
   name: "AI Complaint Categorization System",

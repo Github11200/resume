@@ -98,14 +98,14 @@ date: "July 2025",
 Awarded for developing #link("https://devpost.com/software/posturai")[Posturai], a real-time posture correction app
 
 #certificates(
+name: "Robotics Programming Award x3",
+issuer: "Waterloo CEMC",
+date: "May 2026",
+)\
+Awarded for innovative motion control algorithms and technical documentation
+
+#certificates(
 name: "Senior Computer Programming Award",
 issuer: "Seaquam Secondary School",
 date: "June 2026",
 )\
-
-#certificates(
-name: "Euclid Math Contest Distinction",
-issuer: "Waterloo CEMC",
-date: "May 2026",
-)\
-Top 25% in Canada for the Euclid math contest

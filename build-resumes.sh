@@ -11,9 +11,9 @@ declare -a project_files=(
 )
 
 declare -a output_files=(
-  "$root_dir/Low-Level-Resume.pdf"
-  "$root_dir/Full-Stack-Resume.pdf"
-  "$root_dir/Machine-Learning-Resume.pdf"
+  "$root_dir/Low-Level/Jinay Patel.pdf"
+  "$root_dir/Full-Stack/Jinay Patel.pdf"
+  "$root_dir/Machine-Learning/Jinay Patel.pdf"
 )
 
 tmp_dir="$(mktemp -d)"

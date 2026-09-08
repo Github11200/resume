@@ -18,7 +18,7 @@ url: "https://github.com/Github11200/Robot-Data-Visualization",
 linkName: "GitHub",
 )
 - Streamed CSV-formatted odometry, PID error data, and logs over a *websocket* to a *real-time Svelte dashboard*
-- Used *Chart.js* to render live PID and error graphs and the *Canvas API* to draw the robot's live position on a 2D field
+- Used Chart.js to render live PID and error graphs and the Canvas API to draw the robot's live position on a 2D field
 
 #project(
 name: "AI Complaint Categorization System",

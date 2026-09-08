@@ -4,7 +4,7 @@
 #let name = "Jinay Patel"
 #let email = "jinayunity22@gmail.com"
 #let github = "github.com/Github11200"
-#let personal-site = "jinay-patel.vercel.app/"
+#let personal-site = "jinay-patel.vercel.app"
 
 #show: doc => {
 resume(
@@ -72,16 +72,16 @@ location: "Remote",
 - Deployed a self-hosted Nextcloud server (Microsoft 365 alternative) using Docker, which allowed file sharing and private video calls
 - Configured a *Tailscale tunnel* to securely expose the Nextcloud server for remote video calls and file sharing
 
-#include "projects/fullstack-projects.typ"
+#include "projects/low-level-projects.typ"
 
 == Awards
 
 #certificates(
-name: "Excellence Award @ Vex Robotics World Championship",
+name: "Vex Robotics World Champion",
 issuer: "RECF & Vex Robotics",
 date: "April 2026",
 )\
-Awarded to the top team out of 20,000+ teams worldwide for excellent performance in all areas of robotics
+Top overall team among 20,000+ worldwide, recognized for excellence across robot design, programming, and competitive performance
 
 #certificates(
 name: "Excellence Award @ Provincial Championship",
@@ -96,6 +96,12 @@ issuer: "VSHacks",
 date: "July 2025",
 )\
 Awarded for developing #link("https://devpost.com/software/posturai")[Posturai], a real-time posture correction app
+
+#certificates(
+name: "Senior Computer Programming Award",
+issuer: "Seaquam Secondary School",
+date: "June 2026",
+)\
 
 #certificates(
 name: "Euclid Math Contest Distinction",

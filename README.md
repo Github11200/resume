@@ -7,6 +7,10 @@ Previous releases remain available, and failed builds leave the last published
 resume in place. Publishing uses GitHub's built-in token; no additional secret
 or Google Drive upload is needed.
 
+The customized resume template is included in `template/` so local and GitHub
+builds use the same layout and project-heading fields. It is based on
+`basic-resume` 0.2.8 and retains its Unlicense in `template/LICENSE`.
+
 ## Permanent PDF link
 
 Use this URL in the separate portfolio repository:

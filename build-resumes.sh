@@ -11,6 +11,7 @@ trap 'rm -rf "$tmp_dir"' EXIT
 
 cp "$project_file" "$tmp_dir/$(basename "$project_file")"
 cp "$template" "$tmp_dir/resume.typ"
+cp -R "$root_dir/template" "$tmp_dir/template"
 
 # Normal version (education at top)
 typst compile "$tmp_dir/resume.typ" "$output_dir/Jinay Patel.pdf"

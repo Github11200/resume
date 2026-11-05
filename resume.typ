@@ -1,4 +1,4 @@
-#import "@preview/basic-resume:0.2.8": *
+#import "template/resume.typ": *
 
 // Personal Information
 #let name = "Jinay Patel"

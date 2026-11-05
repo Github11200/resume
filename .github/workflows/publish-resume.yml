@@ -26,9 +26,7 @@ jobs:
           typst-version: '0.15.1'
 
       - name: Build resume
-        run: |
-          bash build-resumes.sh
-          cp 'Jinay Patel.pdf' Jinay_Patel_Resume.pdf
+        run: bash build-resumes.sh
 
       - name: Publish PDF to GitHub Releases
         env:
@@ -46,7 +44,7 @@ jobs:
 
           # Unique tags keep previous PDFs and make reruns safe without replacing assets.
           release_tag="resume-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          gh release create "$release_tag" Jinay_Patel_Resume.pdf \
+          gh release create "$release_tag" output/Jinay_Patel_Resume.pdf \
             --repo "$GITHUB_REPOSITORY" \
             --target "$GITHUB_SHA" \
             --title "Resume (${GITHUB_SHA:0:7})" \

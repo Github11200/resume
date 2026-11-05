@@ -1,0 +1,16 @@
+# Only the public resume sources, template, build, and release configuration
+# belong in this repository. Everything else at the root is local by default.
+/*
+!/.gitignore
+!/.github/
+!/README.md
+!/build-resumes.sh
+!/resume.typ
+!/projects.typ
+!/template/
+
+# Never accidentally commit generated resumes or application metadata.
+*.pdf
+*.json
+__pycache__/
+*.pyc

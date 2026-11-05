@@ -1,0 +1,54 @@
+name: Publish resume
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-resume
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out resume sources
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@6a2cfaf0b28d636b00148f965e315bae81079aaa # v5
+        with:
+          typst-version: '0.15.1'
+
+      - name: Build resume
+        run: |
+          bash build-resumes.sh
+          cp 'Jinay Patel.pdf' Jinay_Patel_Resume.pdf
+
+      - name: Publish PDF to GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Do not let an old run replace the latest resume after a newer push.
+          current_sha="$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)"
+          if [[ "$GITHUB_SHA" != "$current_sha" ]]; then
+            echo 'A newer commit is on main; skipping this release.'
+            exit 0
+          fi
+
+          # Unique tags keep previous PDFs and make reruns safe without replacing assets.
+          release_tag="resume-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          gh release create "$release_tag" Jinay_Patel_Resume.pdf \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Resume (${GITHUB_SHA:0:7})" \
+            --notes "Automatically compiled from commit $GITHUB_SHA." \
+            --latest

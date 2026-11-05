@@ -3,31 +3,19 @@ set -euo pipefail
 
 root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 template="$root_dir/resume.typ"
-
-declare -a project_files=(
-  "$root_dir/projects/low-level-projects.typ"
-  "$root_dir/projects/fullstack-projects.typ"
-  "$root_dir/projects/ai-projects.typ"
-)
-
-declare -a output_files=(
-  "$root_dir/Low-Level/Jinay Patel.pdf"
-  "$root_dir/Full-Stack/Jinay Patel.pdf"
-  "$root_dir/Machine-Learning/Jinay Patel.pdf"
-)
+project_file="$root_dir/projects.typ"
+output_dir="$root_dir"
 
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
 
-mkdir -p "$tmp_dir/projects"
+cp "$project_file" "$tmp_dir/$(basename "$project_file")"
+cp "$template" "$tmp_dir/resume.typ"
 
-for i in "${!project_files[@]}"; do
-  project_file="${project_files[$i]}"
-  output_file="${output_files[$i]}"
-  temp_typst="$tmp_dir/resume-${i}.typ"
-  temp_project="$tmp_dir/projects/$(basename "$project_file")"
+# Normal version (education at top)
+typst compile "$tmp_dir/resume.typ" "$output_dir/Jinay Patel.pdf"
 
-  cp "$project_file" "$temp_project"
-  sed "s|#include \"projects/low-level-projects.typ\"|#include \"projects/$(basename "$project_file")\"|" "$template" > "$temp_typst"
-  typst compile "$temp_typst" "$output_file"
-done
+# Waterlooworks version (education at bottom)
+mkdir -p "$output_dir/Waterlooworks"
+sed '/^== Education$/,/^== Skills$/{ /^== Skills$/!d }' "$tmp_dir/resume.typ" | sed '${s/$/\n\n== Education\n\n#edu(\n  institution: "University of Waterloo",\n  degree: "Bachelor of Computer Engineering",\n)/}' > "$tmp_dir/resume-ww.typ"
+typst compile "$tmp_dir/resume-ww.typ" "$output_dir/Waterlooworks/Jinay Patel.pdf"

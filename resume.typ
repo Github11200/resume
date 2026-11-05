@@ -9,6 +9,7 @@
 #show: doc => {
   resume(
     author: name,
+    pronouns: [*Robotics World Champion*],
     email: email,
     github: github,
     personal-site: personal-site,
@@ -25,15 +26,24 @@
 
 #edu(
   institution: "University of Waterloo",
-  dates: "Expected Graduation: Jun 2031",
   degree: "Bachelor of Computer Engineering",
 )
 
 == Skills
 *Languages*: C/C++ (5 years), JavaScript/TypeScript (6 years), Python (5 years), Java (2 years), Rust (3 years) \
-*Technologies*: PyTorch, LangChain, Mastra, CMake, vcpkg, React, Svelte, Next JS, Tailwind CSS, Git, Docker, Unity, Linux
+*Technologies*: PyTorch, LangChain, Mastra, CMake, CUDA, React, Svelte, Next.JS, Tailwind CSS, Git, Docker, Unity, Linux, ROS2
 
 == Experience
+
+#work(
+  title: "Perception Engineer",
+  company: "WATonomous",
+  location: "Waterloo, ON",
+  dates: dates-helper(start-date: "September 2026", end-date: "Present"),
+)
+- Cut BEVFusion perception latency by *25%*, from 43 to 32 ms, using ResNet-50 for 2.47x faster camera processing
+- Built a PyTorch model training pipeline to fine-tune 7M parameters, caching LiDAR data to avoid repeated sensor processing
+- Implemented a TensorRT/CUDA semantic segmentation head to map 6 road categories, eliminating 240,000 calculations per frame
 
 #work(
   title: "Lead Software Engineer",
@@ -41,9 +51,9 @@
   location: "Delta, BC",
   dates: dates-helper(start-date: "October 2023", end-date: "June 2026"),
 )
-- Built a data backend with Deno and TypeScript to aggregate data from 3 sources, cutting manual data entry by 50%
-- Created a custom React and Tauri desktop CMS app, reducing data entry time from weeks to 60 minutes
-- Built a Deno backend caching layer for slow third-party API endpoints, increasing server *response speed by 150%*
+- Cut manual data entry by *50%* with a Deno and TypeScript backend aggregating team, event, and award data from 3 sources
+- Reduced website updates from weeks to 60 minutes with a React and Tauri desktop content management system (CMS)
+- Increased server response speed by *150%* by caching third-party API responses in the Deno backend for the robotics website
 
 #work(
   title: "Embedded Controls Software Engineer",
@@ -51,28 +61,19 @@
   location: "Delta, BC",
   dates: dates-helper(start-date: "October 2021", end-date: "June 2023"),
 )
-- Implemented C++ motion algorithms, securing a *100% win rate* during autonomous periods across 15+ matches
-- Designed an interpolated lookup table using a monotonic cubic spline to tune PID constants in real time, increasing movement accuracy by 200% with *error tolerances under 1 inch*
+- Achieved a *100% autonomous win rate* across 15+ matches with C++ PID control, odometry, and automatic heading correction
+- Increased movement accuracy by *200%* with errors under 1 inch by using a cubic-spline lookup table to tune PID control
 
 #work(
-  title: "Software Engineering Tutor",
-  company: "Code Ninjas",
-  location: "Surrey, BC",
-  dates: dates-helper(start-date: "September 2025", end-date: "March 2026"),
-)
-- Helped 5 senior Black Belt students debug and implement features for their games being built with C\# and Unity
-- Designed ad campaigns with visual assets for Code Ninjas, improving the local branch's search visibility
-
-#work(
-  title: "Freelance Systems Administrator / IT Consultant",
+  title: "IT Consultant",
   company: "Convergence Media",
   location: "Remote",
 )
-- Created a custom Linux Mint ISO using Cubic with 3 bash scripts to automate the installation and setup of programs
-- Deployed a self-hosted Nextcloud server (Microsoft 365 alternative) using Docker, which allowed file sharing and private video calls
-- Configured a *Tailscale tunnel* to securely expose the Nextcloud server for remote video calls and file sharing
+- Automated Linux workstation provisioning with a custom Linux Mint ISO, Cubic, and 3 Bash scripts for software installation
+- Replaced Microsoft 365 file sharing and video calls with a self-hosted Nextcloud server deployed in Docker containers
+- Enabled secure remote access to Nextcloud file sharing and video calls by configuring a Tailscale virtual private network (VPN)
 
-#include "projects/low-level-projects.typ"
+#include "projects.typ"
 
 == Awards
 
@@ -81,14 +82,14 @@
   issuer: "RECF & Vex Robotics",
   date: "April 2026",
 )\
-Top overall team among 20,000+ worldwide, recognized for excellence across robot design, programming, and competitive performance
+Top overall team among *20,000+* worldwide, recognized for excellence across robot design, programming, and competitive performance
 
 #certificates(
-  name: "Excellence Award @ Provincial Championship",
-  issuer: "Vex Robotics",
-  date: "February 2026",
+  name: "Robotics Programming Award x3",
+  issuer: "RECF & Vex Robotics",
+  date: "May 2026",
 )\
-Awarded to the top team out of the 100+ teams in British Columbia for excellent performance
+Awarded for innovative motion control algorithms and technical documentation
 
 #certificates(
   name: "VSHacks Hackathon 2nd Place",
@@ -96,16 +97,3 @@ Awarded to the top team out of the 100+ teams in British Columbia for excellent 
   date: "July 2025",
 )\
 Awarded for developing #link("https://devpost.com/software/posturai")[Posturai], a real-time posture correction app
-
-#certificates(
-  name: "Robotics Programming Award x3",
-  issuer: "Waterloo CEMC",
-  date: "May 2026",
-)\
-Awarded for innovative motion control algorithms and technical documentation
-
-#certificates(
-  name: "Senior Computer Programming Award",
-  issuer: "Seaquam Secondary School",
-  date: "June 2026",
-)\

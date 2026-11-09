@@ -59,7 +59,7 @@
   title: "Embedded Controls Software Engineer",
   company: "Seaquam Robotics",
   location: "Delta, BC",
-  dates: dates-helper(start-date: "October 2021", end-date: "June 2023"),
+  dates: dates-helper(start-date: "October 2021", end-date: "June 2026"),
 )
 - Achieved a *100% autonomous win rate* across 15+ matches with C++ PID control, odometry, and automatic heading correction
 - Increased movement accuracy by *200%* with errors under 1 inch by using a cubic-spline lookup table to tune PID control

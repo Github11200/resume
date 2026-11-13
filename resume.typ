@@ -69,5 +69,5 @@
 #include "projects.typ"
 
 == Skills
-*Languages*: C/C++ (5 years), JavaScript/TypeScript (6 years), Python (5 years), Java (2 years), Rust (3 years) \
+*Languages*: C/C++ (5 years), JavaScript/TypeScript (6 years), Python (5 years), Rust (3 years) \
 *Technologies*: PyTorch, LangChain, Mastra, CMake, CUDA, React, Svelte, Next.JS, Tailwind CSS, Git, Docker, Linux, ROS2

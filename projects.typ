@@ -8,20 +8,21 @@
   url: "https://github.com/Github11200/Motion-Control-Framework",
   linkName: "GitHub",
 )
-- Built a C++ navigation library with PID and boomerang controllers, configured for 10 ms control and 5 ms position updates
-- Configured 2D Bezier trajectories with 0.25-inch waypoint spacing and forward/backward passes enforcing acceleration limits
-- Built a Svelte and WebSocket dashboard to visualize robot position, PID error, and system logs for real-time motion debugging
+- Built drive-to-point PID and drive-to-pose lookahead controllers with odometry, drift compensation, and a 10 ms control loop
+- Interpolated look up table that uses a Cubic spline to calculate PID gains prior to every movement
+- Generated 2D cubic Bézier paths with 0.25-inch waypoints and acceleration limits; used RAMSETE with odometry based pose error to correct linear and angular velocity before feedforward wheel commands
+- Built a custom self-registering C++ test harness with *89 tests* covering PID, geometry, Bézier curves, and interpolation
 
 #project(
-  name: "Verbosity: Custom Programming Language",
+  name: "Verbosity: C++ Compiler",
   type: "Personal Project",
   url: "https://github.com/Github11200/Verbosity",
   linkName: "GitHub",
   url2: "https://jinay-patel.vercel.app/blog/creating-verbosity",
   link2Name: "Blog Post",
 )
-- Built a 3-stage C++ compiler with a lexer, recursive-descent parser, and code generator producing executable C++ programs
-- Implemented variables, functions, pointers, loops, and arithmetic with an abstract syntax tree and polymorphic code generation
+- Built a compiler with lexing, recursive-descent parsing, and C++ code generation for a custom language
+- Implemented variables, functions, pointers, loops, and arithmetic with an AST and Pratt expression parser
 
 #project(
   name: "Lynx (Automated Note Organizer)",
@@ -29,14 +30,17 @@
   url: "https://community.obsidian.md/plugins/impact-forge",
   linkName: "Obsidian Plugin Listing",
 )
-- Reached *250+ users* with an Obsidian plugin using TypeScript, LangChain, and Ollama to organize notes with local AI models
-- Implemented retrieval-augmented generation (RAG) with vector search and a Graphology knowledge graph to answer questions from relevant notes and linked references, updating both indexes as notes change and running AI inference locally through Ollama
+- Launched a TypeScript Obsidian plugin using local Ollama models to organize notes, reaching *300+ users*
+- Built retrieval-augmented search with LangChain vectors and a Graphology knowledge graph to answer note-based questions
+- Synchronized vector and graph indexes as notes changed so answers reflect the most up-to-date versoin of the vault
 
 #project(
   name: "Posturai",
-  type: "Hackathon Project (2nd Place)",
-  url: "https://devpost.com/software/posturai",
-  linkName: "Devpost",
+  type: "Hackathon Project - VSHacks 2nd Place",
+  url: "https://github.com/Github11200/Posturai",
+  linkName: "GitHub",
 )
-- Built a Next.js posture app with browser-based ONNX inference, webcam feedback, break reminders, and local session analytics
-- Trained a PyTorch posture classifier on *150 images* and exported the model to ONNX for inference directly in the web browser
+- Built a Next.js posture monitor with MediaPipe and browser-based ONNX inference for live webcam feedback and audio alerts
+- Used shoulder-centered data augmentation to generate *2,000 pose samples* from 200 images, making the test accuracy go from *70%* to *81%*
+- Trained a PyTorch classifier on *132 pose features*, then exported it to ONNX for browser inference
+- Tracked sitting, break, and bad-posture intervals in local Dexie storage to power session analytics

@@ -15,7 +15,7 @@
   accent-color: "#000000",
   font: "New Computer Modern",
   paper: "us-letter",
-  author-font-size: 18pt,
+  author-font-size: 20pt,
   font-size: 9.09pt,
   body,
 ) = {

@@ -32,7 +32,7 @@
 )
 - Launched a TypeScript Obsidian plugin using local Ollama models to organize notes, reaching *300+ users*
 - Built retrieval-augmented search with LangChain vectors and a Graphology knowledge graph to answer note-based questions
-- Synchronized vector and graph indexes as notes changed so answers reflect the most up-to-date versoin of the vault
+- Synchronized vector and graph indexes as notes changed so answers reflect the most up-to-date version of the vault
 
 #project(
   name: "Posturai",

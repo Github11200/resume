@@ -5,6 +5,7 @@ root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 template="$root_dir/resume.typ"
 project_file="$root_dir/projects.typ"
 output_dir="$root_dir/output"
+public_dir="$root_dir/public"
 cv_dir="${CAREER_OPS_DIR:-$root_dir/../career-ops}"
 cv_file="$cv_dir/cv.md"
 
@@ -18,6 +19,8 @@ cp -R "$root_dir/template" "$tmp_dir/template"
 # Normal version (education at top)
 mkdir -p "$output_dir"
 typst compile "$tmp_dir/resume.typ" "$output_dir/Jinay_Patel_Resume.pdf"
+mkdir -p "$public_dir"
+cp "$output_dir/Jinay_Patel_Resume.pdf" "$public_dir/Jinay_Patel_Resume.pdf"
 
 # Waterlooworks version (education at bottom)
 sed '/^== Education$/,/^== Experience$/{ /^== Experience$/!d }' "$tmp_dir/resume.typ" | sed '${s/$/\n\n== Education\n\n#edu(\n  institution: "University of Waterloo",\n  degree: "Bachelor of Computer Engineering",\n)/}' > "$tmp_dir/resume-ww.typ"

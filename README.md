@@ -1,11 +1,11 @@
 # Resume
 
 Edit `resume.typ` and `projects.typ`, then commit and push to `main`.
-GitHub Actions compiles the resume with Typst 0.15.1 and publishes
-`Jinay_Patel_Resume.pdf` in a new GitHub Release marked **Latest**.
-Previous releases remain available, and failed builds leave the last published
-resume in place. Publishing uses GitHub's built-in token; no additional secret
-or Google Drive upload is needed.
+Run `bash build-resumes.sh` before committing resume changes. The build updates
+the tracked `public/Jinay_Patel_Resume.pdf`, which the portfolio links to on
+`main`. Commit that PDF with the source files so the website serves the new
+version when the commit is pushed. GitHub Actions also publishes a release
+when it can run; failed runs leave the last release in place.
 
 The customized resume template is included in `template/` so local and GitHub
 builds use the same layout and project-heading fields. It is based on
@@ -15,11 +15,10 @@ builds use the same layout and project-heading fields. It is based on
 
 Use this URL in the separate portfolio repository:
 
-[Download the latest resume](https://github.com/Github11200/resume/releases/latest/download/Jinay_Patel_Resume.pdf)
+[Download the latest resume](https://raw.githubusercontent.com/Github11200/resume/main/public/Jinay_Patel_Resume.pdf)
 
-The URL stays the same as new releases are published. It becomes available
-after the first successful workflow run. This is a direct download link;
-GitHub may download the PDF rather than display an inline preview.
+The URL stays the same as new commits are pushed to `main`. GitHub may download
+the PDF rather than display an inline preview.
 
 ## Build locally
 
@@ -30,20 +29,21 @@ bash build-resumes.sh
 ```
 
 This produces `output/Jinay_Patel_Resume.pdf` and
-`output/Jinay_Patel_Resume_Waterlooworks.pdf`.
+`output/Jinay_Patel_Resume_Waterlooworks.pdf`, and refreshes the tracked
+`public/Jinay_Patel_Resume.pdf`.
 The release workflow publishes the main resume under the stable filename
-`Jinay_Patel_Resume.pdf`; generated PDFs do not need to be committed.
+`Jinay_Patel_Resume.pdf`.
 
 The workflow can also be run manually from **Actions → Publish resume → Run
-workflow** on `main`. Once the workflow is added, push the source files and
-build script along with it so the remote build uses the current resume.
+workflow** on `main` when GitHub Actions is available.
 
 ## Folder layout
 
 - `resume.typ`, `projects.typ`: public resume content.
 - `template/`: the shared resume layout and its license.
 - `.github/workflows/`: builds and publishes only the main public resume.
-- `output/`: generated public PDFs, ignored by Git.
+- `output/`: generated local PDFs, ignored by Git.
+- `public/`: the generated main PDF committed for the portfolio link.
 - `local/`: laptop-only application files, ignored by Git.
 
 Application-specific resumes, profiles, screening JSON, and sources belong in
@@ -52,9 +52,10 @@ tailoring snapshots are in `local/tailoring/`, and supporting notes are in
 `local/notes/`. Previous builds, previews, and tool caches are preserved in
 `local/scratch/`.
 
-Only the public top-level files listed in `.gitignore`, `template/`, and
-`.github/` are eligible for normal commits. PDF and JSON files are also ignored
-throughout the repository. Keep new job-application material under `local/`;
+Only the public top-level files listed in `.gitignore`, `template/`, `.github/`,
+and `public/Jinay_Patel_Resume.pdf` are eligible for normal commits. Other PDF
+and JSON files are ignored throughout the repository. Keep new job-application
+material under `local/`;
 do not force-add ignored files. The release workflow uploads one explicit
 public PDF path and never scans application folders.
 

@@ -8,9 +8,11 @@
 !/resume.typ
 !/projects.typ
 !/template/
+!/public/
 
 # Never accidentally commit generated resumes or application metadata.
 *.pdf
+!/public/Jinay_Patel_Resume.pdf
 *.json
 __pycache__/
 *.pyc
